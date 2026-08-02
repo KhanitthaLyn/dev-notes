@@ -38,7 +38,9 @@ Here's the JVM's step-by-step flow:
 ## 🛠️ Real-World Scenario / Mini Example
 A common real-world case:
 
+
 [example java]
+
 try {
     doSomeBusinessLogic(); // throws NullPointerException("user id is null")
 } finally {
@@ -46,11 +48,13 @@ try {
 }
 
 
+
 The logs the team sees will show `SQLException: connection already closed` — everyone chases a bug in the connection layer, when the real problem was `user id is null` all along. Time wasted debugging the wrong thing entirely.
 
 **How to prevent it:** use **try-with-resources** (for anything implementing `AutoCloseable`). It handles this automatically through a mechanism called **suppressed exceptions** — the second exception gets attached to the first one (accessible via `getSuppressed()`) instead of silently replacing it.
 
 [example java]
+
 try (Connection conn = getConnection()) {
     doSomeBusinessLogic();
 } // conn is closed automatically; if close() throws, it becomes a suppressed exception

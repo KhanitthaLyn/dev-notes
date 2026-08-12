@@ -1,4 +1,4 @@
-#The Big Picture & Analogy
+# The Big Picture & Analogy
 
 This topic covers 2 related concepts:
 **Optional** is a "box that explicitly tells you it might be empty," replacing `null`, which gives no such warning.

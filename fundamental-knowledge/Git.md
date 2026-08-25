@@ -1,12 +1,12 @@
 # Git & Version Control Notes
 
-## 1. Introduction to Git & Version Control
+# 1. Introduction to Git & Version Control
 
 - **What is Git:** An essential tool utilized in almost every software engineering job role.
 - **The "Version History" Concept:** Git operates similarly to the "version history" function in Google Docs or Microsoft Word. It saves snapshots of files at specific points in time, serving as a critical safety net that lets developers view and restore code to previous states if mistakes occur.
 - **Repository:** A specific directory or folder tracked and managed by Git.
 
-## 2. Git Installation
+# 2. Git Installation
 
 - Download the installer directly from [git-scm.com/downloads](https://git-scm.com/downloads).
 
@@ -23,7 +23,7 @@ Download the Windows version, run the installer using all default options, then 
 git
 ```
 
-## 3. Command Line & Navigation
+# 3. Command Line & Navigation
 
 Git is primarily interacted with through the command line (Terminal on Mac, PowerShell on Windows).
 
@@ -34,7 +34,7 @@ Git is primarily interacted with through the command line (Terminal on Mac, Powe
 | `ls` | Lists all contents (files and folders) inside the current directory |
 | `cd <path>` | Change Directory — moves into your project folder, e.g. `cd ~/desktop/git-tutorial` |
 
-## 4. Basic Git Workflow: Tracking & Saving Changes
+# 4. Basic Git Workflow: Tracking & Saving Changes
 
 ```bash
 git init
@@ -73,7 +73,7 @@ Checks which files have been modified, created, or left untracked since the prev
 
 Use `git diff` right before `git add` or `git commit` to review exactly what's about to be saved.
 
-## 5. Undoing & Resetting Changes
+# 5. Undoing & Resetting Changes
 
 | Command | Description |
 |---|---|
@@ -107,11 +107,11 @@ git stash apply    # re-apply the most recent stash but keep it in the list
 ```
 Useful when you need to switch branches quickly but aren't ready to commit.
 
-## 6. Code Editor Integration
+# 6. Code Editor Integration
 
 Modern editors like **VS Code** have native Git integrations. Developers can visually inspect files in a Git panel (similar to `git status`), stage edits with a **+** icon (similar to `git add`), and discard modifications visually.
 
-## 7. Viewing and Restoring History
+# 7. Viewing and Restoring History
 
 ```bash
 git log --all
@@ -133,7 +133,7 @@ The first command copies the old files into your current directory and stages th
 
 > **Branch name:** labels like `master` or `main` point to the latest commit on that branch, making it easy to return via `git checkout master`.
 
-## 8. Branching
+# 8. Branching
 
 A **branch** is an independent line of development — a movable pointer to a commit. Branching lets you work on new features or fixes without affecting the main codebase (`main`/`master`) until you're ready to combine the work back in.
 
@@ -150,7 +150,7 @@ A **branch** is an independent line of development — a movable pointer to a co
 
 **Typical workflow:** create a branch for a new feature → commit changes on that branch → merge it back into `main` once complete and tested.
 
-## 9. Merging & Conflict Resolution
+# 9. Merging & Conflict Resolution
 
 ```bash
 git merge <branch-name>
@@ -183,7 +183,7 @@ git commit
 
 > Editors like VS Code display conflicts visually with buttons like *Accept Current Change*, *Accept Incoming Change*, or *Accept Both Changes*.
 
-## 10. Remote Repositories & Collaboration
+# 10. Remote Repositories & Collaboration
 
 A **remote** is a version of your repository hosted elsewhere (e.g. GitHub, GitLab, Bitbucket) that allows multiple people to collaborate on the same project.
 
@@ -212,7 +212,7 @@ git checkout main
 git pull
 ```
 
-## 11. Miscellaneous Features
+# 11. Miscellaneous Features
 
 **Aliases** — set up shortcuts to save keystrokes:
 ```bash
